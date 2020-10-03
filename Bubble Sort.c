@@ -3,18 +3,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#include<stdio.h>
+#include<stdlib.h>
+
 void bubble_sort(int a[] , int n)
 {
-    int round,i,temp;
-    for(round=1 ; round <= n-1 ; round++)
+    int i,j;
+
+    for(i=0 ; i < (n-1) ; i++)
     {
-        for(i=0 ; i <= (n-1-round) ; i++)
+        for(j=0 ; j < (n-1-i) ; j++)
         {
-            if(a[i] > a[i+1])
+            if(a[j] > a[j+1])
             {
-                temp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = temp;
+                int temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
             }
         }
     }
